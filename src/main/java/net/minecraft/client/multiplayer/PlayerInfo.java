@@ -104,6 +104,8 @@ public class PlayerInfo {
       return this.skinLookup.get();
    }
 
+
+
    @Nullable
    public PlayerTeam getTeam() {
       return Minecraft.getInstance().level.getScoreboard().getPlayersTeam(this.getProfile().getName());
