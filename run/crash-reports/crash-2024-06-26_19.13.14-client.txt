@@ -1,0 +1,215 @@
+---- Minecraft Crash Report ----
+// You should try our sister game, Minceraft!
+
+Time: 2024-06-26 19:13:14
+Description: Initializing game
+
+java.lang.ExceptionInInitializerError
+	at net.minecraft.client.renderer.texture.TextureManager.reload(TextureManager.java:184)
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$of$0(SimpleReloadInstance.java:29)
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.<init>(SimpleReloadInstance.java:43)
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.of(SimpleReloadInstance.java:28)
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.create(SimpleReloadInstance.java:88)
+	at net.minecraft.server.packs.resources.ReloadableResourceManager.createReload(ReloadableResourceManager.java:45)
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:569)
+	at net.minecraft.client.main.Main.main(Main.java:185)
+Caused by: net.minecraft.ResourceLocationException: Non [a-z0-9/._-] character in path of location: minecraft:..\\..\\de\\yansie\\resources\\background.png
+	at net.minecraft.resources.ResourceLocation.assertValidPath(ResourceLocation.java:230)
+	at net.minecraft.resources.ResourceLocation.<init>(ResourceLocation.java:38)
+	at net.minecraft.resources.ResourceLocation.<init>(ResourceLocation.java:42)
+	at net.minecraft.resources.ResourceLocation.<init>(ResourceLocation.java:46)
+	at net.minecraft.client.gui.screens.TitleScreen.<clinit>(TitleScreen.java:63)
+	... 8 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at net.minecraft.client.renderer.texture.TextureManager.reload(TextureManager.java:184)
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$of$0(SimpleReloadInstance.java:29)
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.<init>(SimpleReloadInstance.java:43)
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.of(SimpleReloadInstance.java:28)
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.create(SimpleReloadInstance.java:88)
+	at net.minecraft.server.packs.resources.ReloadableResourceManager.createReload(ReloadableResourceManager.java:45)
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:569)
+
+-- Initialization --
+Details:
+	Modules: 
+		ADVAPI32.dll:Erweiterte Windows 32 Base-API:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		COMCTL32.dll:Bibliothek für Steuerelemente:6.10 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPT32.dll:Krypto-API32:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPTBASE.dll:Base cryptographic API DLL:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPTSP.dll:Cryptographic Service Provider API:10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		CoreMessaging.dll:Microsoft CoreMessaging Dll:10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		CoreUIComponents.dll:Microsoft Core UI Components Dll:10.0.22621.3672:Microsoft Corporation
+		DBGHELP.DLL:Windows Image Helper:10.0.22621.3593 (WinBuild.160101.0800):Microsoft Corporation
+		DEVOBJ.dll:Device Information Set DLL:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		DNSAPI.dll:DNS-Client-API-DLL:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		GDI32.dll:GDI Client DLL:10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		GLU32.dll:OpenGL-Hilfsprogrammbibliotheks-DLL:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		IMM32.DLL:Multi-User Windows IMM32 API Client DLL:10.0.22621.3374 (WinBuild.160101.0800):Microsoft Corporation
+		IPHLPAPI.DLL:IP-Hilfs-API:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		KERNEL32.DLL:Client-DLL für Windows NT-Basis-API:10.0.22621.3374 (WinBuild.160101.0800):Microsoft Corporation
+		KERNELBASE.dll:Client-DLL für Windows NT-Basis-API:10.0.22621.3374 (WinBuild.160101.0800):Microsoft Corporation
+		MMDevApi.dll:MMDevice-API:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		MSCTF.dll:MSCTF-Server-DLL:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		MpOav.dll:IOfficeAntiVirus Module:4.18.24050.7 (b60bcb9c79f050335eb91db16f7d3e97336ad10e-dirty):Microsoft Corporation
+		NSI.dll:NSI User-mode interface DLL:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		NTASN1.dll:Microsoft ASN.1 API:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		OLEAUT32.dll:OLEAUT32.DLL:10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		Ole32.dll:Microsoft OLE für Windows:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		OpenAL.dll:Main implementation library:1.23.0:
+		PSAPI.DLL:Process Status Helper:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		Pdh.dll:Windows Unterstützungs-DLL für Leistungsdaten:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		RPCRT4.dll:Remoteprozeduraufruf-Laufzeitumgebung:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		SETUPAPI.dll:Windows Setup-API:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		SHCORE.dll:SHCORE:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		SHELL32.dll:Allgemeine Windows-Shell-DLL:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		UMPDC.dll:User Mode Power Dependency Coordinator:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		USER32.dll:Client-DLL für Windows USER-API (mehrere Benutzer):10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		USERENV.dll:Userenv:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		VCRUNTIME140.dll:Microsoft® C Runtime Library:14.27.29016.0 built by: vcwrkspc:Microsoft Corporation
+		VERSION.dll:Version Checking and File Installation Libraries:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		WINHTTP.dll:Windows HTTP-Dienste:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		WINMM.dll:MCI API-DLL:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		WINSTA.dll:Winstation Library:10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		WS2_32.dll:Windows Socket 2.0-32-Bit-DLL:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		WSOCK32.dll:Windows Socket 32-Bit DLL:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		WTSAPI32.dll:Windows Remote Desktop Session Host Server SDK APIs:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		amsi.dll:Anti-Malware Scan Interface:10.0.22621.3527 (WinBuild.160101.0800):Microsoft Corporation
+		bcrypt.dll:Bibliothek mit kryptografischen Primitiven von Windows:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		bcryptPrimitives.dll:Windows Cryptographic Primitives Library:10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		cfgmgr32.dll:Configuration Manager DLL:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		clbcatq.dll:COM+ Configuration Catalog:2001.12.10941.16384 (WinBuild.160101.0800):Microsoft Corporation
+		combase.dll:Microsoft COM für Windows:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		cryptnet.dll:Crypto Network Related API:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		dbgcore.DLL:Windows Core Debugging Helpers:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		dhcpcsvc.DLL:DHCP Clientdienst:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		dhcpcsvc6.DLL:DHCPv6-Client:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		dinput8.dll:Microsoft DirectInput:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		drvstore.dll:Driver Store API:10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		dwmapi.dll:Microsoft Desktopfenster-Manager-API:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		dxcore.dll:DXCore:10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		fastprox.dll:WMI Custom Marshaller:10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		fwpuclnt.dll:FWP/IPsec Benutzermodus-API:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		gdi32full.dll:GDI Client DLL:10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		glfw.dll:GLFW 3.4.0 DLL:3.4.0:GLFW
+		gpapi.dll:Gruppenrichtlinienclient-API:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		icm32.dll:Microsoft Color Management Module (CMM):10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		iertutil.dll:Laufzeit-Hilfsprogramm für Internet Explorer:11.00.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		imagehlp.dll:Windows NT Image Helper:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		inputhost.dll:InputHost:10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		java.dll:OpenJDK Platform binary:17.0.4.1:Eclipse Adoptium
+		java.exe:OpenJDK Platform binary:17.0.4.1:Eclipse Adoptium
+		jemalloc.dll
+		jimage.dll:OpenJDK Platform binary:17.0.4.1:Eclipse Adoptium
+		jli.dll:OpenJDK Platform binary:17.0.4.1:Eclipse Adoptium
+		jna3366149872241838396.dll:JNA native library:6.1.6:Java(TM) Native Access (JNA)
+		jsvml.dll:OpenJDK Platform binary:17.0.4.1:Eclipse Adoptium
+		jvm.dll:OpenJDK 64-Bit server VM:17.0.4.1:Eclipse Adoptium
+		kernel.appcore.dll:AppModel API Host:10.0.22621.2715 (WinBuild.160101.0800):Microsoft Corporation
+		lwjgl.dll
+		lwjgl_opengl.dll
+		lwjgl_stb.dll
+		management.dll:OpenJDK Platform binary:17.0.4.1:Eclipse Adoptium
+		management_ext.dll:OpenJDK Platform binary:17.0.4.1:Eclipse Adoptium
+		msasn1.dll:ASN.1 Runtime APIs:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		mscms.dll:Microsoft-Farbabstimmungssystem-DLL:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		msvcp140.dll:Microsoft® C Runtime Library:14.27.29016.0 built by: vcwrkspc:Microsoft Corporation
+		msvcp_win.dll:Microsoft® C Runtime Library:10.0.22621.3374 (WinBuild.160101.0800):Microsoft Corporation
+		msvcrt.dll:Windows NT CRT DLL:7.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		mswsock.dll:Microsoft Windows Sockets 2.0-Dienstanbieter:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		napinsp.dll:E-Mail-Namenshimanbieter:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		ncrypt.dll:Windows NCrypt-Router:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		net.dll:OpenJDK Platform binary:17.0.4.1:Eclipse Adoptium
+		netutils.dll:Net Win32 API Helpers DLL:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		nio.dll:OpenJDK Platform binary:17.0.4.1:Eclipse Adoptium
+		nlansp_c.dll:NLA Namespace Service Provider DLL:10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		ntdll.dll:DLL für NT-Layer:10.0.22621.3374 (WinBuild.160101.0800):Microsoft Corporation
+		ntmarta.dll:Windows NT MARTA-Anbieter:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		nvgpucomp64.dll:NVIDIA GPU Compiler Driver, Version 546.01 :31.0.15.4601:NVIDIA Corporation
+		nvoglv64.dll:NVIDIA Compatible OpenGL ICD:31.0.15.4601:NVIDIA Corporation
+		nvspcap64.dll:NVIDIA Game Proxy:3.27.0.120:NVIDIA Corporation
+		opengl32.dll:OpenGL Client DLL:10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		perfos.dll:DLL für Windows-Systemleistungsobjekte:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		pfclient.dll:SysMain Client:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		pnrpnsp.dll:PNRP-Namespaceanbieter:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		powrprof.dll:Power Profile Helper DLL:10.0.22621.3374 (WinBuild.160101.0800):Microsoft Corporation
+		profapi.dll:User Profile Basic API:10.0.22621.3527 (WinBuild.160101.0800):Microsoft Corporation
+		rasadhlp.dll:Remote Access AutoDial Helper:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		rsaenh.dll:Microsoft Enhanced Cryptographic Provider:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		sapi.dll:Sprach-API:5.3.28730.00 (WinBuild.160101.0800):Microsoft Corporation
+		sechost.dll:Host for SCM/SDDL/LSA Lookup APIs:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		shlwapi.dll:Shell Light-weight-Hilfsprogrammbibliothek:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		srvcli.dll:Server Service Client DLL:10.0.22621.3374 (WinBuild.160101.0800):Microsoft Corporation
+		sunmscapi.dll:OpenJDK Platform binary:17.0.4.1:Eclipse Adoptium
+		textinputframework.dll:"TextInputFramework.DYNLINK":10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		ucrtbase.dll:Microsoft® C Runtime Library:10.0.22621.3593 (WinBuild.160101.0800):Microsoft Corporation
+		urlmon.dll:OLE32-Erweiterung für Win32:11.00.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		uxtheme.dll:Microsoft UxTheme-Bibliothek:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		vcruntime140_1.dll:Microsoft® C Runtime Library:14.27.29016.0 built by: vcwrkspc:Microsoft Corporation
+		verify.dll:OpenJDK Platform binary:17.0.4.1:Eclipse Adoptium
+		wbemcomn.dll:WMI:10.0.22621.2506 (WinBuild.160101.0800):Microsoft Corporation
+		wbemprox.dll:WMI:10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		wbemsvc.dll:WMI:10.0.22621.3672 (WinBuild.160101.0800):Microsoft Corporation
+		win32u.dll:Win32u:10.0.22621.3733 (WinBuild.160101.0800):Microsoft Corporation
+		windows.storage.dll:Microsoft WinRT Storage-API:10.0.22621.3527 (WinBuild.160101.0800):Microsoft Corporation
+		winrnr.dll:LDAP RnR Provider DLL:10.0.22621.1 (WinBuild.160101.0800):Microsoft Corporation
+		wintrust.dll:Microsoft Trust Verification APIs:10.0.22621.3737 (WinBuild.160101.0800):Microsoft Corporation
+		wintypes.dll:Windows-Basistypen-DLL:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		wldp.dll:Windows-Sperrungsrichtlinie:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		wshbth.dll:Windows Sockets Helper DLL:10.0.22621.3374 (WinBuild.160101.0800):Microsoft Corporation
+		xinput1_4.dll:API für Microsoft Common Controller:10.0.22621.2860 (WinBuild.160101.0800):Microsoft Corporation
+		zip.dll:OpenJDK Platform binary:17.0.4.1:Eclipse Adoptium
+Stacktrace:
+	at net.minecraft.client.main.Main.main(Main.java:185)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.2
+	Minecraft Version ID: 1.20.2
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 17.0.4.1, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 228582984 bytes (217 MiB) / 364904448 bytes (348 MiB) up to 4269801472 bytes (4072 MiB)
+	CPUs: 12
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+	Identifier: Intel64 Family 6 Model 165 Stepping 3
+	Microarchitecture: unknown
+	Frequency (GHz): 2.90
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: NVIDIA GeForce RTX 2060 SUPER
+	Graphics card #0 vendor: NVIDIA (0x10de)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x1f06
+	Graphics card #0 versionInfo: DriverVersion=31.0.15.4601
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 3.20
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 3.20
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 29593.19
+	Virtual memory used (MB): 17240.59
+	Swap memory total (MB): 13312.00
+	Swap memory used (MB): 165.16
+	JVM Flags: 0 total; 
+	JVM uptime in seconds: 8.066
+	Launched Version: 1.20.2
+	Backend library: LWJGL version 3.3.2+13
+	Backend API: NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2 GL version 3.2.0 NVIDIA 546.01, NVIDIA Corporation
+	Window size: <not initialized>
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Using VBOs: Yes
+	Is Modded: Very likely; Client jar signature invalidated
+	Type: Client (map_client.txt)
+	Locale: en_US
+	CPU: 12x Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz

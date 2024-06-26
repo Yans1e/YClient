@@ -22,7 +22,7 @@ public class Client {
         System.out.println("-------------\nLINIT\n-------------");
 
 
-        //minecraft.setScreen(new WelcomeScreen(Component.literal("Hallo "+minecraft.getUser().getName())));
+        minecraft.setScreen(new WelcomeScreen(Component.literal("Hallo "+minecraft.getUser().getName())));
 
     }
     public static void tick(){

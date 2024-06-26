@@ -1,0 +1,47 @@
+/give Player394 minecraft:leather_boots
+/give Player394 diam
+/give Player394 minecraft:diamond_chestplate
+/summon cow
+/give Player394 minecraft:netherite_sword
+/summon minecraft:fireball
+/summon minecraft:fireball ~ ~ ~ {ExplosionSize:100b}
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:100b}
+/summon minecraft:giant
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:100b}
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:10b}
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:200b}
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:150b}
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:125b}
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:100b}
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:127b}
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:128b}
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:127b}
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:127000000000b}
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:1270000000000000000b}
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:-1b}
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:127b}
+/locate structure minecraft:mansion
+/tp @s 4272 ~ 432
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:127b}
+/setblock ~ ~ ~ minecraft:diamond_block
+/fill 4065 137 742
+/fill 4065 137 742 ~ ~ ~ dirt
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:127b}
+/weather clear
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:127b}
+/tp -104.39 -11.00 -96.79
+/tp -104 -11.00 -96
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:127b}
+/tp -20 -30.00 -76
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:127b}
+/tp 87. -33.00 -283
+/tp 87 -33.00 -283
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:127b}
+/summon minecraft:fireball ~ ~ ~ {ExplosionPower:17b}
+/team add Lol
+/team join Lol
+/gamerule doMobSpawning false
+/kill @e
+/summon minecraft:lightning_bolt
+/kill @e
+/time set day
